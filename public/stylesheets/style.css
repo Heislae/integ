@@ -46,9 +46,6 @@ a:hover,
   color: var(--black);
 }
 
-.search-container {
-  width: 70%;
-}
 .right-nav {
   font-size: 16px;
   display: flex;
@@ -448,10 +445,6 @@ footer {
 @media only screen and (max-width: 768px) {
   .right-nav {
     justify-content: center;
-  }
-  .search-container {
-    width: 80%;
-    margin: auto;
   }
   .logo-container {
     transform: translateX(0em);
