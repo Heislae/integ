@@ -6,6 +6,7 @@ const Product = require("../models/product");
 const User = require("../models/user");
 const Order = require("../models/order");
 const Category = require("../models/category");
+const Raw_Products = require("../models/rawprod");
 AdminBro.registerAdapter(AdminBroMongoose);
 
 const express = require("express");
@@ -15,13 +16,44 @@ const adminBro = new AdminBro({
   databases: [mongoose],
   rootPath: "/admin",
   branding: {
-    companyName: "BestBags",
+    companyName: "Kape-Kapehan",
     logo: "/images/shop-icon.png",
     softwareBrothers: false,
   },
   resources: [
     {
       resource: Product,
+      options: {
+        parent: {
+          name: "Admin Content",
+          icon: "InventoryManagement",
+        },
+        properties: {
+          description: {
+            type: "plaintext",
+            isVisible: { list: false, filter: true, show: true, edit: true },
+          },
+          _id: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
+          title: {
+            isTitle: true,
+          },
+          price: {
+            type: "number",
+          },
+          imagePath: {
+            isVisible: { list: false, filter: false, show: true, edit: true },
+            components: {
+              show: AdminBro.bundle(
+                "../components/admin-imgPath-component.jsx"
+              ),
+            },
+          },
+        },
+      },
+    },
+    {resource: Raw_Products,
       options: {
         parent: {
           name: "Admin Content",
