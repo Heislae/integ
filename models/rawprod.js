@@ -6,6 +6,10 @@ const rawProductSchema = Schema({
         type: String,
         required: true,
     },
+    imagePath: {
+        type: String,
+        required: true,
+    },
     description: {
         type: String,
         required: true,

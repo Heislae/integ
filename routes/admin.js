@@ -67,9 +67,6 @@ const adminBro = new AdminBro({
           _id: {
             isVisible: { list: false, filter: true, show: true, edit: false },
           },
-          title: {
-            isTitle: true,
-          },
           price: {
             type: "number",
           },

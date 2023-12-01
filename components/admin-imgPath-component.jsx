@@ -2,10 +2,10 @@ import React from "react";
 import { Label } from "admin-bro";
 
 const imgStyle = {
-  width: "30em",
+  width: "20vh",
   border: "2px solid gray",
   borderRadius: "11px",
-  margin: "1em auto",
+  margin: "0.5 em",
 };
 
 const AdminShowImage = (props) => {
