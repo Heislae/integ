@@ -67,7 +67,7 @@ async function seedDB() {
           title: titlesArr[i],
           imagePath: imgsArr[i],
           description: faker.lorem.paragraph(),
-          price: faker.random.number({ min: 10, max: 50 }),
+          price: faker.random.number({ min: 500, max: 550 }),
           manufacturer: faker.company.companyName(0),
           available: true,
           category: categ._id,
