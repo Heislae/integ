@@ -12,14 +12,14 @@ async function seedDB() {
 
   //----------------------Coffee
   const coffee_titles = [
-    "Light Roast",
-    "Medium Roast",
-    "Dark Roast",
+    "Mochamu Blend",
+    "Paumaga Blend",
+    "Sarabica Blend",
   ];
   const coffee_imgs = [
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://www.imghippo.com/images/1701598041.png",
+    "https://www.imghippo.com/images/1701598189.png",
+    "https://www.imghippo.com/images/1701598225.png",
   ];
   //----------------------Hot Cocoa
   const hot_cocoa_titles = [
@@ -28,9 +28,9 @@ async function seedDB() {
     "Chocolate Supreme",
   ];
   const hot_cocoa_imgs = [
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://www.imghippo.com/images/1701599634.png",
+    "https://www.imghippo.com/images/1701599664.png",
+    "https://www.imghippo.com/images/1701599766.png",
   ];
   //----------------------Tea
   const tea_titles = [
@@ -39,9 +39,9 @@ async function seedDB() {
     "Black Tea",
   ];
   const tea_imgs = [
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://www.imghippo.com/images/1701598807.png",
+    "https://www.imghippo.com/images/1701598760.png",
+    "https://www.imghippo.com/images/1701598702.png",
   ];
   //----------------------Equipments
   const equipments_titles = [
@@ -51,10 +51,10 @@ async function seedDB() {
     "Espresso Machine Set",
   ];
   const equipments_imgs = [
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://www.imghippo.com/images/1701600513.png",
+    "https://www.imghippo.com/images/1701600786.png",
+    "https://www.imghippo.com/images/1701603177.png",
+    "https://www.imghippo.com/images/1701601199.png",
   ];
 
 
