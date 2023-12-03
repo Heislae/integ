@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const rawProductSchema = Schema({
-    productName: {
+    rawProductCode: {
+        type: String,
+        required: true,
+    },
+    rawProductName: {
         type: String,
         required: true,
     },
@@ -24,6 +28,8 @@ const rawProductSchema = Schema({
     },
     manufacturer: {
         type: String,
+        required: true,
+        
     },
     inStock: {
         type: Boolean,
