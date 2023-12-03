@@ -15,5 +15,7 @@
 ## 5. Right-click the seedDB folder and click the "Open in Integrated Terminal"
 ## 6. Type "node category-seed.js", then wait for it to finish
 ## 7. Type "node products-seed.js", then wait for it to finish
+## 7. Type "node raw-product-seed.js", then wait for it to finish
+
 
 ok p
