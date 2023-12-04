@@ -48,9 +48,6 @@
       class="d-block w-100 hero-image"
       src="/images/banner-all-products.png"
     />
-    <div class="hero-text">
-      <h1><%=pageName%></h1>
-    </div>
   </div>
   <%} else {%> <%categories.forEach( category => {%> <%if(pageName ==
   category.title){%>
@@ -59,10 +56,6 @@
       class="d-block w-100 hero-image"
       src="/images/banner-<%=category.slug%>.png"
     />
-    <div class="hero-text">
-      <h1><%=pageName%></h1>
-    </div>
-  </div>
   <%}%> <%})%> <%}%>
 
   <hr class="gradient-style" />

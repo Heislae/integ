@@ -8,8 +8,10 @@
   --ivory: #f9f7f4;
   --black: #202020;
   --dark-gray: #474747;
-  --light-orange: #F8F5DD;
+  --bg-light-orange: #F8F5DD;
+  --bg-but-darker: #e0ddc5;
 
+  --breadcrumb-font:'Sensa Wild Fill';
 }
 * {
   margin: 0px;
@@ -19,6 +21,7 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg-light-orange);
 }
 
 html {
@@ -220,6 +223,9 @@ a:hover,
 /* BREADCRUMBS STYLE */
 .breadcrumb-item a:hover {
   color: var(--orange) !important;
+}
+.breadcrumb {
+  background-color:var(--bg-but-darker);
 }
 
 /* SHOPPING CART STYLES */
