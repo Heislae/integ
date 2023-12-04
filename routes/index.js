@@ -1,12 +1,13 @@
 const express = require("express");
 const csrf = require("csurf");
-const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 const Product = require("../models/product");
 const Category = require("../models/category");
 const Cart = require("../models/cart");
 const Order = require("../models/order");
 const middleware = require("../middleware");
 const router = express.Router();
+const faker = require("faker");
+
 
 const csrfProtection = csrf();
 router.use(csrfProtection);
@@ -223,19 +224,6 @@ router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
     return res.redirect("/shopping-cart");
   }
   const cart = await Cart.findById(req.session.cart._id);
-  stripe.charges.create(
-    {
-      amount: cart.totalCost * 100,
-      currency: "usd",
-      source: req.body.stripeToken,
-      description: "Test charge",
-    },
-    function (err, charge) {
-      if (err) {
-        req.flash("error", err.message);
-        console.log(err);
-        return res.redirect("/checkout");
-      }
       const order = new Order({
         user: req.user,
         cart: {
@@ -244,7 +232,7 @@ router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
           items: cart.items,
         },
         address: req.body.address,
-        paymentId: charge.id,
+        paymentId: faker.helpers.replaceSymbolWithNumber("##-##-####"),
       });
       order.save(async (err, newOrder) => {
         if (err) {
@@ -256,9 +244,8 @@ router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
         req.flash("success", "Successfully purchased");
         req.session.cart = null;
         res.redirect("/user/profile");
+        console.log("Checkout has been done")
       });
-    }
-  );
 });
 
 // create products array to store the info of each product in the cart
