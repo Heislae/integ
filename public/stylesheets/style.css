@@ -1,5 +1,5 @@
 :root {
-  --dark-blue: #478ba2;
+  --orange: #DE8705;
   --light-blue: #b9d4db;
   --dark-orange: #e9765b;
   --light-orange: #f2a490;
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 9px "Poppins", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 html {
@@ -85,7 +85,7 @@ a:hover,
 /* CATEGORIES NAVBAR */
 
 .navbar-custom {
-  background-color: var(--dark-blue);
+  background-color: var(--orange);
 }
 
 .navbar-custom .navbar-brand,
@@ -165,7 +165,7 @@ a:hover,
 
 .fa-chevron-circle-right {
   font-size: 50px;
-  color: var(--dark-blue);
+  color: var(--orange);
   margin-top: 1.5em;
   border-radius: 55%;
   box-shadow: 5px 5px 5px var(--dark-gray);
@@ -201,7 +201,7 @@ hr.gradient-style {
 }
 
 .button-style {
-  background-color: var(--dark-blue);
+  background-color: var(--orange);
   color: var(--ivory) !important;
 }
 
@@ -295,16 +295,16 @@ hr.gradient-style {
 /* PAGINATION STYLE */
 .pagination .active .page-link {
   color: var(--ivory);
-  background-color: var(--dark-blue);
+  background-color: var(--orange);
 }
 
 .pagination .page-link {
-  color: var(--dark-blue);
+  color: var(--orange);
 }
 
 /* BREADCRUMBS STYLE */
 .breadcrumb-item a:hover {
-  color: var(--dark-blue) !important;
+  color: var(--orange) !important;
 }
 
 /* SHOPPING CART STYLES */
@@ -370,7 +370,7 @@ ul {
   color: var(--ivory);
   background-color: var(--black);
   padding: 1em 1em 0.2em 1em;
-  border-bottom: 5px var(--dark-blue) solid;
+  border-bottom: 5px var(--orange) solid;
 }
 .bottom-footer {
   font-size: 14px;
