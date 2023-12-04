@@ -9,7 +9,6 @@ connectDB();
 
 async function seedDB() {
   faker.seed(0);
-
   //----------------------Coffee
   const coffee_titles = [
     "Mochamu Blend",
