@@ -17,4 +17,4 @@
 ## 7. Type "node products-seed.js", then wait for it to finish
 ## 7. Type "node raw-product-seed.js", then wait for it to finish
 
-nagpush na si jobart
+Push ulit ni jobarterino
