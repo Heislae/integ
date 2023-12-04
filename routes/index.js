@@ -231,8 +231,17 @@ router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
           totalCost: cart.totalCost,
           items: cart.items,
         },
+        fullname: req.body.fullname,
+        email: req.body.email,
+        city: req.body.city,
         address: req.body.address,
+        zip: req.body.zip,
+        cardnumber: req.body.cardnumber,
+        cvv: req.body.cvv,
+        expmonth: req.body.expmonth,
+        expyear: req.body.expyear,
         paymentId: faker.helpers.replaceSymbolWithNumber("##-##-####"),
+        
       });
       order.save(async (err, newOrder) => {
         if (err) {
