@@ -15,6 +15,6 @@
 ## 5. Right-click the seedDB folder and click the "Open in Integrated Terminal"
 ## 6. Type "node category-seed.js", then wait for it to finish
 ## 7. Type "node products-seed.js", then wait for it to finish
-## 7. Type "node raw-product-seed.js", then wait for it to finish
-
-Push ulit ni jobarterino
+## 8. Type "npm start" to start the server
+## 9. Paste this link to your browser "http://localhost:3000/" (Or ctrl+click)
+## 10. To access the admin page, paste "http://localhost:3000/admin" to your web browser (Or ctrl+click)
