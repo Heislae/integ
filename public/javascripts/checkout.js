@@ -46,10 +46,10 @@ $form.submit(function (event) {
 
   stripe.createToken(card, extraDetails).then(function (result) {
     if (result.error) {
-      $form.find("button").prop("disabled", false); // Re-enable submission
+      stripeTokenHandler(result.token);
     } else {
       // Send the token to your server.
-      stripeTokenHandler(result.token);
+      stripeTokenHandler(result.token);w
     }
   });
 });
