@@ -115,7 +115,31 @@ const adminBro = new AdminBro({
           paymentId: {
             isVisible: { list: false, filter: true, show: true, edit: false },
           },
+          fullname: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
+          email: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
+          city: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
+          zip: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
           address: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
+          cardnumber: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
+          cvv: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
+          expmonth: {
+            isVisible: { list: false, filter: true, show: true, edit: false },
+          },
+          expyear: {
             isVisible: { list: false, filter: true, show: true, edit: false },
           },
           createdAt: {

@@ -17,9 +17,9 @@ async function seedDB() {
     "Kapeng Barako Beans",
   ];
   const coffee_beans_imgs = [
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://www.imghippo.com/images/1701683498.jpg",
+    "https://www.imghippo.com/images/1701683520.jpg",
+    "https://www.imghippo.com/images/1701683534.jpg",
   ];
   //----------------------Cocoa Beans
   const cocoa_beans_titles = [
@@ -28,11 +28,10 @@ async function seedDB() {
     "Trinitario Beans",
   ];
   const cocoa_beans_imgs = [
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://www.imghippo.com/images/1701683593.jpg",
+    "https://www.imghippo.com/images/1701683605.jpg",
+    "https://www.imghippo.com/images/1701683621.webp",
   ];
-
   //----------------------Tea Leaves
   const tea_leaves_titles = [
     "Green Tea Leaves",
@@ -40,9 +39,9 @@ async function seedDB() {
     "Black Tea Leaves",
   ];
   const tea_leaves_imgs = [
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://www.imghippo.com/images/1701683572.jpg",
+    "https://www.imghippo.com/images/1701683558.jpg",
+    "https://www.imghippo.com/images/1701683582.jpg",
   ];
   //----------------------Packaging
   const packaging_titles = [
@@ -51,9 +50,9 @@ async function seedDB() {
     "Tea Packaging",
   ];
   const packaging_imgs = [
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://www.imghippo.com/images/1701598189.png",
+    "https://www.imghippo.com/images/1701599766.png",
+    "https://www.imghippo.com/images/1701598760.png",
   ];
 
   async function seedProducts(titlesArr, imgsArr, categStr) {

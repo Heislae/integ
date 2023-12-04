@@ -60,7 +60,7 @@
 
   <hr class="gradient-style" />
   <!-- Contents -->
-  <div class="row pl-4 pr-4">
+  <div class="row pl-4 pr-4 d-flex align-items-center justify-content-center">
     <% products.forEach((product) => { %>
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-index-box">
       <div class="single-product d-flex flex-column h-100">
@@ -68,7 +68,7 @@
           class="title-link"
           href="/products/<%=product.category.slug%>/<%=product._id%>"
         >
-          <img src="<%= product.imagePath %>" alt="Bag" class="img-fluid"
+          <img src="<%= product.imagePath %>" class="img-fluid"
         /></a>
         <div class="product-info">
           <a

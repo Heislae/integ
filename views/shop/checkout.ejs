@@ -88,6 +88,7 @@ span.price {
 </style>
 
 <!-- checkout form -->
+<br><br>
 <div class="col-md-8 m-auto">
   <div class="row">
     <div class="col-75">
@@ -95,7 +96,7 @@ span.price {
         <form action="/checkout" method="POST" id="checkout-form">
   
           <div class="row">
-            <div class="col-50">
+            <div class="col-50 form-group">
               <h3>Billing Address</h3>
               <!-- full name -->
               <label for="fullname"><i class="fa fa-user"></i> Full Name</label>
@@ -118,7 +119,7 @@ span.price {
               </div>
             </div>
   
-            <div class="col-50">
+            <div class="col-50 form-group">
               <h3>Payment</h3>
               <label for="fname">Accepted Cards</label>
               <div class="icon-container">
@@ -137,7 +138,7 @@ span.price {
               <label for="expmonth">Expiration Month</label>
               <input type="text" id="expmonth" name="expmonth" placeholder="September">
   
-              <div class="row">
+              <div class="row form-group">
                 <div class="col-50">
                   <!-- expiration year -->
                   <label for="expyear">Expiration Year</label>
