@@ -17,5 +17,4 @@
 ## 7. Type "node products-seed.js", then wait for it to finish
 ## 7. Type "node raw-product-seed.js", then wait for it to finish
 
-
-ok p
+nagpush na si jobart
