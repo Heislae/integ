@@ -40,7 +40,39 @@ const orderSchema = Schema({
       },
     ],
   },
+  fullname: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
   address: {
+    type: String,
+    required: true,
+  },
+  zip: {
+    type: String,
+    required: true,
+  },
+  cardnumber: {
+    type: String,
+    required: true,
+  },
+  cvv: {
+    type: String,
+    required: true,
+  },
+  expmonth: {
+    type: String,
+    required: true,
+  },
+  expyear: {
     type: String,
     required: true,
   },
