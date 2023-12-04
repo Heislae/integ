@@ -18,3 +18,5 @@
 ## 8. Type "npm start" to start the server
 ## 9. Paste this link to your browser "http://localhost:3000/" (Or ctrl+click)
 ## 10. To access the admin page, paste "http://localhost:3000/admin" to your web browser (Or ctrl+click)
+
+Testing ni rayray kung kita pfp niya sa github
