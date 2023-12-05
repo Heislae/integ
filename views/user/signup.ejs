@@ -1,10 +1,97 @@
 <%- include ../partials/header %> <%- include ../partials/categories-navbar %>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 <style>
 .signup{
-  width: 100%;
+    width: 100%;
     height: 85vh;
+    background-image: url(https://www.imghippo.com/images/1701744162.png);
+    /* background-image: url(https://www.imghippo.com/images/1701734521.png); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+  /* background-color: black; */
+  width: 50%;
+  height: 65%;
+  margin-bottom: 14vh;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 20px 0 rgba(14, 14, 13, 0.37);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: bolder;
+  text-shadow: 1px 3px 2px  rgba(0,0,0,.3);;
+}
+
+.form-control{
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px  rgba(0,0,0,.5);
+}
+
+input {
+    color: white;
+    font-weight: bold; 
+  }
+
+  .form-control{
+    color: black;
+    font-weight: bold;
+  }
+.form-control:hover{
+  background-position: 100% 0;
+}
+.form-control:focus{
+  outline: 2px dashed #080808;
+  outline-offset: 0.2em;
+  opacity: 60%;
+}
+#submitbtn {
+  margin-right: 20px;
+  margin-top: 5px;
+  width: fit-content;
+  box-shadow: 3px 3px 4px  rgba(0,0,0,.5);
+  border-radius: 5px;
+  background-color: #DE8705;
+  color: white;
+  font-weight: bold;
+}
+#submitbtn button {
+  color: white;
+  font-weight: bold;
+  height: 100%;
+}
+#submitbtn:hover{
+  background-color: white;
+}
+#submitbtn button:hover{
+  color: #DE8705;
+}
+label {
+  font-weight: bold;
+}
+#eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 75%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+#eye-icon1 {
+  position: absolute;
+  right: 15px;
+  top: 75%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+.form-group {
+  position: relative;
 }
 
 </style>
@@ -13,7 +100,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 m-auto">
-      <h1 class="mt-4 mb-4">Sign Up Page</h1>
+      <h1 class="mt-4 mb-4 text-center">Sign Up Page</h1>
       <% if(errorMsg != null && errorMsg.length>0) {%>
       <div id="flash-msg" class="alert alert-danger">
         <%=errorMsg %>
@@ -21,6 +108,7 @@
       <%}%>
       <form action="/user/signup" method="POST">
         <div class="form-group">
+          <i class="fa fa-user" aria-hidden="true"></i>
           <label for="name">Name</label>
           <input
             type="name"
@@ -31,10 +119,12 @@
           />
         </div>
         <div class="form-group">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
           <label for="email">Email address</label>
           <input type="email" class="form-control" name="email" id="email" />
         </div>
         <div class="form-group">
+          <i class="fa fa-key" aria-hidden="true"></i>
           <label for="password">Password</label>
           <input
             type="password"
@@ -42,8 +132,12 @@
             name="password"
             id="password"
           />
+          <div id="eye-icon" class="eye-icon" onclick="togglePasswordVisibility()">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </div>
         </div>
         <div class="form-group">
+          <i class="fa fa-key" aria-hidden="true"></i>
           <label for="password2">Verify Password</label>
           <input
             type="password"
@@ -51,15 +145,44 @@
             name="password2"
             id="password2"
           />
+          <div id="eye-icon1" class="eye-icon" onclick="togglePasswordVisibility()">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </div>
         </div>
-        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
-        <button type="submit" class="btn btn-primary button-style">
-          Sign Up
-        </button>
+        <div class="text-center" id="submitbtn">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+          <button type="submit" class="btn text-center">
+            Sign Up
+          </button>
+        </div>
       </form>
     </div>
   </div>
 </div>
+<script>
+  function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    var confirmPwdInput = document.getElementById("password2");
+    var eyeIcon = document.getElementById("eye-icon");
+    var eyeIcon1 = document.getElementById("eye-icon1");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      eyeIcon.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+    } else {
+      passwordInput.type = "password";
+      eyeIcon.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
+    }
+
+    if (confirmPwdInput.type === "password") {
+      confirmPwdInput.type = "text";
+      eyeIcon1.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+    } else {
+      confirmPwdInput.type = "password";
+      eyeIcon1.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
+    }
+  }
+</script>
 </div>
 
 <%- include ../partials/footer %>

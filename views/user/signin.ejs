@@ -1,9 +1,100 @@
 <%- include ../partials/header %> <%- include ../partials/categories-navbar %>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<style>
+  .signin{
+    width: 100%;
+    height: 85vh;
+    background-image: url(https://www.imghippo.com/images/1701743873.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+  /* background-color: black; */
+  width: 50%;
+  height: 60%;
+  margin-bottom: 14vh;
+  padding-top:35px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 20px 0 rgba(14, 14, 13, 0.37);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+}
+h1 {
+  font-weight: bolder;
+  text-shadow: 1px 3px 2px  rgba(0,0,0,.3);;
+}
+
+.form-control{
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px  rgba(0,0,0,.5);
+  font-weight: bold;
+}
+.form-control:focus{
+  outline: 2px dashed #080808;
+  outline-offset: 0.2em;
+  opacity: 60%;
+}
+input {
+    color: white;
+    font-weight: bold; 
+  }
+
+label{
+  font-weight: bold;
+}
+
+
+.mt-3 a {
+    color: #0c529e; 
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  #loginbtn {
+  margin-right: 20px;
+  margin-top: 5px;
+  width: fit-content;
+  box-shadow: 3px 3px 4px  rgba(0,0,0,.5);
+  border-radius: 5px;
+  background-color: #DE8705;
+  color: white;
+  font-weight: bold;
+}
+#loginbtn button {
+  color: rgb(247, 247, 247);
+  font-weight: bold;
+  height: 100%;
+}
+#loginbtn:hover{
+  background-color: white;
+  color:#DE8705;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 75%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.form-group {
+  position: relative;
+}
+
+</style>
+
+<div class="signin">
 <div class="container">
   <div class="row">
     <div class="col-md-8 m-auto">
-      <h1 class="mt-4 mb-4">Sign In Page</h1>
+      <h1 class="mt-4 mb-4">Sign In</h1>
       <!-- Flash message -->
       <% if(errorMsg !=null && errorMsg.length>0) {%>
       <div id="flash-msg" class="alert alert-danger">
@@ -12,10 +103,12 @@
       <%}%>
       <form action="/user/signin" method="POST">
         <div class="form-group">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
           <label for="email">Email address</label>
           <input type="email" class="form-control" name="email" id="email" />
         </div>
         <div class="form-group">
+          <i class="fa fa-key" aria-hidden="true"></i>
           <label for="password">Password</label>
           <input
             type="password"
@@ -23,10 +116,13 @@
             name="password"
             id="password"
           />
+          <div id="eye-icon" class="eye-icon" onclick="togglePasswordVisibility()">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </div>
         </div>
         <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
-        <button type="submit" class="btn btn-primary button-style">
-          Sign In
+        <button type="submit" class="btn" id="loginbtn">
+          Log In
         </button>
       </form>
       <p class="mt-3">
@@ -34,6 +130,21 @@
       </p>
     </div>
   </div>
+</div>
+<script>
+  function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    var eyeIcon = document.getElementById("eye-icon");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      eyeIcon.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+    } else {
+      passwordInput.type = "password";
+      eyeIcon.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
+    }
+  }
+</script>
 </div>
 
 <%- include ../partials/footer %>
